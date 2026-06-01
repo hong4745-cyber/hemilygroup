@@ -1,0 +1,313 @@
+/* ==============================================
+   contact.css — Contact US 페이지
+   ============================================== */
+
+/* ── 히어로 배너 ── */
+.contact-hero {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: #0a1e3c;
+}
+.contact-hero__bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center 30%;
+  opacity: .55;
+}
+.contact-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(5,15,50,.6) 0%, rgba(5,15,50,.25) 60%, transparent 100%);
+}
+.contact-hero__content {
+  position: relative; z-index: 2;
+  height: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-12);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: var(--sp-8);
+  gap: var(--sp-3);
+}
+.contact-hero__title {
+  font-family: var(--font-en);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-black);
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+}
+.contact-hero__bread {
+  display: flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--fs-xs); color: rgba(255,255,255,.6);
+}
+.contact-hero__bread a { color: rgba(255,255,255,.6); text-decoration: none; }
+.contact-hero__bread span { font-size: 6px; opacity: .5; }
+
+/* ── 공통 inner ── */
+.contact-inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-8);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* ── 섹션 헤더 ── */
+.contact-header { margin-bottom: var(--sp-10); }
+.contact-section__title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-dark);
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--sp-3);
+}
+.contact-section__desc {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--sp-2);
+}
+.contact-section__em {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent-blue);
+}
+
+/* ── 2단 sticky 레이아웃 ── */
+.contact-sticky-wrap {
+  display: flex;
+  gap: var(--sp-12);
+  align-items: flex-start;
+  padding-top: var(--sp-10);
+}
+
+/* 왼쪽: 폼 + 찾아오시는 길 */
+.contact-left {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 오른쪽: sticky 연락처 카드 */
+.contact-right {
+  position: sticky;
+  top: 140px;
+  flex-shrink: 0;
+  width: 320px;
+  align-self: flex-start;
+}
+
+/* ── 폼 그리드 (contact-grid는 폼만) ── */
+.contact-grid {
+  margin-top: var(--sp-8);
+}
+
+/* ── 폼 ── */
+.contact-form-wrap {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-8);
+  background: var(--color-white);
+  width: 100%;
+}
+.form-field { margin-bottom: var(--sp-6); }
+.form-label {
+  display: flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-dark);
+  margin-bottom: var(--sp-2);
+}
+.form-dot {
+  width: 7px; height: 7px;
+  background: var(--color-accent-blue);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.form-input, .form-textarea {
+  width: 100%;
+  padding: var(--sp-3) var(--sp-4);
+  font-size: var(--fs-sm);
+  font-family: inherit;
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--tr-fast), box-shadow var(--tr-fast);
+  resize: none;
+  background: var(--color-white);
+}
+.form-input:focus, .form-textarea:focus {
+  border-color: var(--color-accent-blue);
+  box-shadow: 0 0 0 3px rgba(0,70,213,.08);
+}
+.form-agree {
+  display: flex; align-items: center; gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+.form-agree__btn {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-white);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--tr-fast), border-color var(--tr-fast);
+  flex-shrink: 0;
+  padding: 0;
+}
+.form-agree__btn.is-checked {
+  background: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
+}
+.form-agree__btn.is-checked::after {
+  content: '✓';
+  font-size: 11px;
+  color: var(--color-white);
+  font-weight: bold;
+}
+.form-agree__circle {
+  display: block; width: 8px; height: 8px;
+  border-radius: 50%; background: var(--color-border);
+}
+.form-agree__btn.is-checked .form-agree__circle { display: none; }
+.form-agree__text { font-size: var(--fs-xs); color: var(--color-text-muted); }
+.form-agree__link {
+  font-size: var(--fs-xs); color: var(--color-accent-blue);
+  text-decoration: underline; margin-left: auto;
+}
+.form-submit-wrap { text-align: center; }
+.form-submit {
+  background: var(--color-accent-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--sp-3) var(--sp-10);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--tr-fast), transform var(--tr-fast);
+}
+.form-submit:hover { background: #0040c0; transform: translateY(-1px); }
+
+/* ── 연락처 카드 ── */
+.contact-info-card {
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--sp-7);
+  background: var(--color-white);
+}
+.info-block { display: flex; gap: var(--sp-4); align-items: flex-start; }
+.info-icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(0,70,213,.06);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-accent-blue);
+  flex-shrink: 0;
+}
+.info-content { flex: 1; }
+.info-label {
+  font-family: var(--font-en);
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.15em;
+  color: var(--color-accent-blue);
+  margin-bottom: var(--sp-2);
+}
+.info-text { font-size: var(--fs-xs); color: var(--color-text-muted); line-height: 1.7; }
+.info-divider { height: 0; margin: var(--sp-6) 0; }
+.info-row { display: flex; gap: var(--sp-3); align-items: baseline; margin-bottom: var(--sp-1); }
+.info-key { font-size: var(--fs-xs); color: var(--color-text-muted); width: 40px; flex-shrink: 0; }
+.info-val { font-size: var(--fs-xs); color: var(--color-text-dark); font-weight: var(--fw-medium); }
+.info-val--link { color: var(--color-accent-blue); text-decoration: none; }
+.info-val--link:hover { text-decoration: underline; }
+
+/* ── ③ 찾아오시는 길 섹션 ── */
+.location-section { display: none; } /* 왼쪽 컬럼에 통합 */
+.location-left { margin-top: 0; }
+
+/* 제목 ↔ 설명 ↔ 지도 간격 */
+.location-section .contact-section__title { margin-bottom: 12px; }
+.location-section .contact-section__desc  { margin-bottom: 32px; }
+
+/* ── 지도 ── */
+.map-wrap {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  margin-bottom: 56px; /* 지도 ↔ 교통 안내 간격 */
+}
+
+/* ── 교통 안내 ── */
+.transport-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+}
+.transport-card {
+  display: flex; align-items: flex-start; gap: var(--sp-4);
+  padding: var(--sp-5) var(--sp-6);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.transport-icon {
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent-blue);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-white);
+}
+.transport-icon svg { width: 22px; height: 22px; }
+.transport-title {
+  font-size: var(--fs-base); font-weight: var(--fw-bold);
+  color: var(--color-text-dark); margin-bottom: var(--sp-2);
+}
+.transport-desc { font-size: var(--fs-sm); color: var(--color-text-muted); line-height: 1.8; }
+.bus-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  margin-right: 7px;
+}
+.bus-tag--red   { background: #e03030; }
+.bus-tag--green { background: #2e9b4e; }
+.bus-tag--blue  { background: #1a64c8; }
+.bus-tag--teal  { background: #2bb5a0; }
+
+/* ── 반응형 ── */
+@media (max-width: 1024px) {
+  .contact-sticky-wrap { flex-direction: column; }
+  .contact-right { position: static; width: 100%; max-width: 500px; }
+}
+@media (max-width: 768px) {
+  .contact-inner { padding-inline: var(--sp-5); padding-top: 60px; padding-bottom: 60px; }
+  .location-section .contact-inner { padding-top: 48px; padding-bottom: 48px; }
+  .contact-hero__content { padding-inline: var(--sp-5); }
+  .contact-hero__title { font-size: var(--fs-3xl); }
+  .transport-grid { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .contact-grid { margin-top: 28px; }
+  .map-wrap { margin-bottom: 36px; }
+  .location-section .contact-section__desc { margin-bottom: 20px; }
+}
+@media (max-width: 480px) {
+  .contact-hero { height: 160px; }
+  .contact-hero__title { font-size: var(--fs-2xl); }
+  .contact-hero__content { padding-inline: var(--sp-4); padding-bottom: var(--sp-5); }
+  .contact-form-wrap { padding: var(--sp-5); }
+}
+
+/* agree 버튼 JS */
+
+/* ── 태블릿 (768px ~ 1023px): inner 약 720px ~ 960px ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact-inner { padding-inline: 24px; }
+}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="헤밀리 — 황성주 박사의 건강기능식품 브랜드" />
+  <title>헤밀리 | 해밀리그룹</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/sub3.css" />
+</head>
+<body>
+
+<!-- ════════════════ HEADER ════════════════ -->
+<header class="site-header is-scrolled" role="banner">
+  <div class="container">
+    <a href="index.html" class="header-logo" aria-label="해밀리그룹 홈으로">
+      <img src="images/01_header_logo.png" alt="Hemily" class="header-logo__img" />
+    </a>
+    <nav class="gnb" role="navigation" aria-label="주요 메뉴">
+      <ul role="list" style="display:flex;align-items:center;margin:0;padding:0;list-style:none;">
+        <li class="gnb__item">
+          <a href="sub1.html" class="gnb__link gnb__link--has-dropdown">헤밀리 그룹</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub1.html"          class="gnb__dropdown-link">헤밀리 그룹</a></li>
+            <li><a href="sub1_story.html" class="gnb__dropdown-link">황성주 박사</a></li>
+            <li><a href="contact.html"        class="gnb__dropdown-link">Contact US</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a href="sub2.html" class="gnb__link gnb__link--has-dropdown">사업분야</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub2.html" class="gnb__dropdown-link">사업분야</a></li>
+            <li><a href="sub2.html#business"  class="gnb__dropdown-link">사업</a></li>
+            <li><a href="sub2.html#education" class="gnb__dropdown-link">미션&amp;교육</a></li>
+            <li><a href="sub2.html#medical"   class="gnb__dropdown-link">메디컬 기반</a></li>
+            <li><a href="sub2.html#residence" class="gnb__dropdown-link">공간&amp;레지던스</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a href="sub3.html" class="gnb__link gnb__link--has-dropdown" aria-expanded="false" aria-haspopup="true">헤밀리</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub3.html" class="gnb__dropdown-link">생식&amp;영양식</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a href="sub4.html" class="gnb__link gnb__link--has-dropdown" aria-expanded="false" aria-haspopup="true">헤밀리 헬스</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub4.html" class="gnb__dropdown-link">생식</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a href="sub5.html" class="gnb__link gnb__link--has-dropdown" aria-expanded="false" aria-haspopup="true">헤밀리 뉴스룸</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub5.html"          class="gnb__dropdown-link">전체</a></li>
+            <li><a href="sub5.html#magazine" class="gnb__dropdown-link">매거진</a></li>
+            <li><a href="sub5.html#press"    class="gnb__dropdown-link">보도자료</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a href="sub6.html" class="gnb__link">해밀리人</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="megaMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="모바일 메뉴">
+  <ul class="mob-list">
+
+    <!-- 헤밀리 그룹 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub1.html" class="mob-link">헤밀리 그룹</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub1.html"       class="mob-sub__link">헤밀리 그룹</a></li>
+        <li><a href="sub1_story.html" class="mob-sub__link">황성주 박사</a></li>
+        <li><a href="contact.html"    class="mob-sub__link">Contact US</a></li>
+      </ul>
+    </li>
+
+    <!-- 사업분야 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub2.html" class="mob-link">사업분야</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub2.html" class="mob-sub__link">사업분야</a></li>
+        <li><a href="sub2.html#business"  class="mob-sub__link">사업</a></li>
+        <li><a href="sub2.html#education" class="mob-sub__link">미션&amp;교육</a></li>
+        <li><a href="sub2.html#medical"   class="mob-sub__link">메디컬 기반</a></li>
+        <li><a href="sub2.html#residence" class="mob-sub__link">공간&amp;레지던스</a></li>
+      </ul>
+    </li>
+
+    <!-- 헤밀리 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub3.html" class="mob-link">헤밀리</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub3.html" class="mob-sub__link">생식&amp;영양식</a></li>
+      </ul>
+    </li>
+
+    <!-- 헤밀리 헬스 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub4.html" class="mob-link">헤밀리 헬스</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub4.html" class="mob-sub__link">생식</a></li>
+      </ul>
+    </li>
+
+    <!-- 헤밀리 뉴스룸 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub5.html" class="mob-link">헤밀리 뉴스룸</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub5.html"          class="mob-sub__link">전체</a></li>
+        <li><a href="sub5.html#magazine" class="mob-sub__link">매거진</a></li>
+        <li><a href="sub5.html#press"    class="mob-sub__link">보도자료</a></li>
+      </ul>
+    </li>
+
+    <!-- 해밀리人 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub6.html" class="mob-link">해밀리人</a>
+      </div>
+    </li>
+
+  </ul>
+</nav>
+
+
+<!-- ════════════ MEGA MENU ════════════ -->
+<div class="mega-menu" id="megaMenu" role="dialog" aria-label="전체 메뉴" aria-hidden="true">
+  <div class="mega-menu__header">
+    <a href="index.html" class="mega-menu__logo-link">
+      <img src="images/01_header_logo1.png" alt="Hemily" class="mega-menu__logo-img" />
+    </a>
+  </div>
+
+  <div class="mega-menu__body">
+    <div class="mega-menu__cols">
+
+      <!-- 헤밀리 그룹 -->
+      <div class="mega-col">
+        <a href="sub1.html" class="mega-col__title">헤밀리 그룹</a>
+        <div class="mega-col__links">
+          <a href="sub1.html#vision"   class="mega-col__link">그룹 비전</a>
+          <a href="sub1.html#business" class="mega-col__link">사업영역</a>
+          <a href="sub1.html#story"    class="mega-col__link">그룹 스토리</a>
+          <a href="sub1.html#history"  class="mega-col__link">연혁</a>
+        </div>
+      </div>
+
+      <!-- 사업분야 -->
+      <div class="mega-col">
+        <a href="sub2.html" class="mega-col__title">사업분야</a>
+        <div class="mega-col__links">
+          <a href="sub2.html" class="mega-col__link">사업분야</a>
+          <a href="sub2.html#business"  class="mega-col__link">사업</a>
+          <a href="sub2.html#education" class="mega-col__link">미션&amp;교육</a>
+          <a href="sub2.html#medical"   class="mega-col__link">메디컬 기반</a>
+          <a href="sub2.html#residence" class="mega-col__link">공간&amp;레지던스</a>
+        </div>
+      </div>
+
+      <!-- 헤밀리 -->
+      <div class="mega-col">
+        <a href="sub3.html" class="mega-col__title">헤밀리</a>
+        <div class="mega-col__links">
+          <a href="sub3.html" class="mega-col__link">생식&amp;영양식</a>
+        </div>
+      </div>
+
+      <!-- 헤밀리 헬스 -->
+      <div class="mega-col">
+        <a href="sub4.html" class="mega-col__title">헤밀리 헬스</a>
+        <div class="mega-col__links">
+          <a href="sub4.html" class="mega-col__link">생식</a>
+        </div>
+      </div>
+
+      <!-- 헤밀리 뉴스룸 -->
+      <div class="mega-col">
+        <a href="sub5.html" class="mega-col__title">헤밀리 뉴스룸</a>
+        <div class="mega-col__links">
+          <a href="sub5.html"          class="mega-col__link">전체</a>
+          <a href="sub5.html#magazine" class="mega-col__link">매거진</a>
+          <a href="sub5.html#press"    class="mega-col__link">보도자료</a>
+        </div>
+      </div>
+
+      <!-- 해밀리人 -->
+      <div class="mega-col">
+        <a href="sub6.html" class="mega-col__title">해밀리人</a>
+        <div class="mega-col__links">
+          <a href="sub6.html" class="mega-col__link">해밀리人</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 하단 footer -->
+  <div class="mega-menu__footer">
+    <div class="mega-menu__footer-top">
+      <a href="#" class="mega-menu__footer-link">개인정보처리방침</a>
+      <a href="#" class="mega-menu__footer-link">이용약관</a>
+    </div>
+    <div class="mega-menu__footer-bottom">
+      <span>ADDRESS: 서울특별시 강남구 역삼로 552 (대치동, KM빌딩) 4층, 5층</span>
+      <span>TEL: 031-701-3377</span>
+      <span>EMAIL: webmaster@hemily.co.kr</span>
+    </div>
+  </div>
+
+</div>
+<!-- ════════════ /MEGA MENU ════════════ -->
+
+<div style="margin-top:var(--header-height);">
+
+  <!-- ════════════════════════════════
+       페이지 배너 (참고사진: erom 제품 + 채소 배경)
+       ════════════════════════════════ -->
+  <div class="page-banner">
+    <div class="page-banner__bg"
+         style="background-image: url('images/sub3_main.png');"></div>
+    <div class="page-banner__overlay"></div>
+    <div class="page-banner__content">
+      <h1 class="page-banner__title">생식&amp;영양식</h1>
+    </div>
+  </div>
+
+
+  <!-- ════ 서브 고정 탭바 ════ -->
+  <nav class="sub-page-nav" id="subPageNav" aria-label="헤밀리 메뉴">
+    <div class="sub-page-nav__inner">
+      <a href="#main-content" class="sub-page-tab is-active" data-section="main-content">생식&amp;영양식</a>
+      <span class="sub-page-nav__slider" id="subNavSlider"></span>
+    </div>
+  </nav>
+    <!-- ════════════════════════════════
+       브랜드 인트로 (참고사진: italic 영문 텍스트)
+       ════════════════════════════════ -->
+  <div class="brand-intro">
+    <div class="brand-intro__inner">
+      <p class="brand-intro__sub s3-up">life care company, hemily group</p>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       상품 그리드 (12개 상품, 4열×3행)
+       ════════════════════════════════ -->
+  <main class="product-wrap" id="main-content">
+    <div class="product-wrap__inner">
+      <div class="product-grid">
+
+        <!-- 1 -->
+        <a href="#" class="product-card s3-up">
+          <div class="product-card__img">
+            <img src="images/sub3_01황성주박사의 1일 1생식 라이프밀.png"
+                 alt="황성주박사의 1일 1생식 라이프밀" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">황성주박사의 1일 1생식 라이프밀</p>
+          </div>
+        </a>
+
+        <!-- 2 -->
+        <a href="#" class="product-card s3-up d1">
+          <div class="product-card__img">
+            <img src="images/sub3_02황성주박사의 Dr. 샐러드.png"
+                 alt="황성주박사의 Dr. 샐러드" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">황성주박사의 Dr. 샐러드</p>
+          </div>
+        </a>
+
+        <!-- 3 -->
+        <a href="#" class="product-card s3-up d2">
+          <div class="product-card__img">
+            <img src="images/sub3_03이롬 황성주박사의 영양식.png"
+                 alt="이롬 황성주박사의 영양식" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 영양식</p>
+          </div>
+        </a>
+
+        <!-- 4 -->
+        <a href="#" class="product-card s3-up d3">
+          <div class="product-card__img">
+            <img src="images/sub3_04이롬 황성주박사의 발효건강식.png"
+                 alt="이롬 황성주박사의 발효건강식" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 발효건강식</p>
+          </div>
+        </a>
+
+        <!-- 5 -->
+        <a href="#" class="product-card s3-up">
+          <div class="product-card__img">
+            <img src="images/sub3_05이롬 황성주박사의 1일 1생식 뉴밀플러스.png"
+                 alt="이롬 황성주박사의 1일 1생식 뉴밀플러스" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 1일 1생식 뉴밀플러스</p>
+          </div>
+        </a>
+
+        <!-- 6 -->
+        <a href="#" class="product-card s3-up d1">
+          <div class="product-card__img">
+            <img src="images/sub3_06이롬 황성주박사의 뉴밀플러스 스페셜.png"
+                 alt="이롬 황성주박사의 뉴밀플러스 스페셜" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 뉴밀플러스 스페셜</p>
+          </div>
+        </a>
+
+        <!-- 7 -->
+        <a href="#" class="product-card s3-up d2">
+          <div class="product-card__img">
+            <img src="images/sub3_07황성주 박사의 1일 영양건강식.png"
+                 alt="황성주 박사의 1일 영양건강식" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">황성주 박사의 1일 영양건강식</p>
+          </div>
+        </a>
+
+        <!-- 8 -->
+        <a href="#" class="product-card s3-up d3">
+          <div class="product-card__img">
+            <img src="images/sub3_08이롬 황성주박사의 마시는 뉴밀.png"
+                 alt="이롬 황성주박사의 마시는 뉴밀" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 마시는 뉴밀</p>
+          </div>
+        </a>
+
+        <!-- 9 -->
+        <a href="#" class="product-card s3-up">
+          <div class="product-card__img">
+            <img src="images/sub3_09이롬 황성주박사의 마시는 영양식.png"
+                 alt="이롬 황성주박사의 마시는 영양식" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 마시는 영양식</p>
+          </div>
+        </a>
+
+        <!-- 10 -->
+        <a href="#" class="product-card s3-up d1">
+          <div class="product-card__img">
+            <img src="images/sub3_10이롬 황성주박사의 마시는 영양식 라이트.png"
+                 alt="이롬 황성주박사의 마시는 영양식 라이트" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 마시는 영양식 라이트</p>
+          </div>
+        </a>
+
+        <!-- 11 -->
+        <a href="#" class="product-card s3-up d2">
+          <div class="product-card__img">
+            <img src="images/sub3_11이롬 황성주박사의 마시는 영양식 140ml.png"
+                 alt="이롬 황성주박사의 마시는 영양식 140ml" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 마시는 영양식 140ml</p>
+          </div>
+        </a>
+
+        <!-- 12 -->
+        <a href="#" class="product-card s3-up d3">
+          <div class="product-card__img">
+            <img src="images/sub3_12이롬 황성주박사의 마시는 영양식.jpg"
+                 alt="이롬 황성주박사의 마시는 영양식 라이트 140ml" loading="lazy" />
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__name">이롬 황성주박사의 마시는 영양식 라이트 140ml</p>
+          </div>
+        </a>
+
+      </div><!-- /.product-grid -->
+    </div>
+  </main>
+
+</div><!-- /margin-top -->
+
+<!-- 우하단 검색 버튼 -->
+<a href="#" class="search-fab" aria-label="상품 검색">🔍</a>
+
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-policy">
+    <div class="container">
+      <nav class="footer-policy__links">
+        <a href="#" class="footer-policy__link footer-policy__link--bold">개인정보처리방침</a>
+        <a href="#" class="footer-policy__link">이용약관</a>
+      </nav>
+      <div class="footer-family">
+        <button class="footer-family__btn" type="button">Family Site</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-info">
+    <div class="container">
+      <address class="footer-address" style="font-style:normal;">
+        <p>
+          <span>ADDRESS: 서울특별시 강남구 역삼로 552 신일빌딩, A빌딩 4층, 5층</span>
+          <span>TEL: 031-751-337T</span>
+          <span>EMAIL: webmaster@hemily.co.kr</span>
+        </p>
+        <p class="footer-copyright">COPYRIGHT ©HEMILY GROUP ALL RIGHTS RESERVED.</p>
+      </address>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" aria-label="맨 위로 이동">
+  <span class="scroll-top__arrow">▲</span>
+  <span class="scroll-top__text">TOP</span>
+</button>
+
+<script src="js/common.js"></script>
+<script src="js/sub3.js"></script>
+</body>
+</html>

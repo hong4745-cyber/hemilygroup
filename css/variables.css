@@ -1,0 +1,127 @@
+/* ==============================================
+   variables.css  ★ 실제 헤밀리그룹 사이트 기준
+   ============================================== */
+
+   :root {
+
+    /* ── 브랜드 컬러 ── */
+    --color-section-dark: #1a2a5e;
+    --color-primary:       #0e3b9c;   /* 헤밀리 메인 파란색 */
+    --color-primary-dark:  #0a2d78;
+    --color-primary-light: #2a56c6;
+  
+    --color-accent-blue:   #0046d5;   /* 버튼, 뱃지, 강조텍스트 */
+    --color-accent-mint:   #00b5ad;   /* TOP 버튼, 포인트 */
+    --color-dot-blue:      #38bdf8;   /* 섹션 불릿 점 */
+  
+    /* 히어로 배경 세이지 그린 */
+    --color-hero-bg:       #e4ecdb;
+    --color-hero-bg2:      #dce8d2;
+  
+    /* 뉴스 섹션 짙은 파랑 */
+    --color-news-bg:       #0d2464;
+    --color-news-bg2:      #0a1e52;
+  
+    /* 중립 */
+    --color-white:         #ffffff;
+    --color-black:         #111111;
+    --color-bg-light:      #f5f5f3;
+    --color-bg-card:       #f0f0ee;
+  
+    /* 텍스트 */
+    --color-text-dark:     #1a1a1a;
+    --color-text-mid:      #444444;
+    --color-text-muted:    #888888;
+    --color-text-light:    #ffffff;
+    --color-text-blue:     #0e3b9c;
+  
+    /* 선 */
+    --color-border:        #e0e0e0;
+    --color-border-light:  rgba(255,255,255,0.15);
+  
+    /* 푸터 배경 */
+    --color-footer-bg:     #151515;
+    --color-footer-top:    #1f1f1f;
+  
+  
+    /* ── 폰트 ── */
+    --font-ko:    'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    --font-en:    'Montserrat', 'Arial', sans-serif;
+    --font-body:  var(--font-ko);
+  
+    /* 폰트 사이즈 */
+    --fs-xs:    0.688rem;   /* 11px */
+    --fs-sm:    0.813rem;   /* 13px */
+    --fs-base:  0.938rem;   /* 15px */
+    --fs-md:    1rem;       /* 16px */
+    --fs-lg:    1.125rem;   /* 18px */
+    --fs-xl:    1.375rem;   /* 22px */
+    --fs-2xl:   1.75rem;    /* 28px */
+    --fs-3xl:   2.25rem;    /* 36px */
+    --fs-4xl:   2.75rem;    /* 44px */
+    --fs-hero:  3.25rem;    /* 52px */
+  
+    /* 폰트 웨이트 */
+    --fw-regular:  400;
+    --fw-medium:   500;
+    --fw-semibold: 600;
+    --fw-bold:     700;
+    --fw-black:    900;
+  
+    /* 행간 */
+    --lh-tight:  1.25;
+    --lh-normal: 1.6;
+    --lh-loose:  1.85;
+  
+    /* 자간 */
+    --ls-tight:  -0.02em;
+    --ls-normal:  0;
+    --ls-wide:    0.04em;
+    --ls-wider:   0.1em;
+    --ls-widest:  0.16em;
+  
+  
+    /* ── 간격 ── */
+    --sp-1:   0.25rem;
+    --sp-2:   0.5rem;
+    --sp-3:   0.75rem;
+    --sp-4:   1rem;
+    --sp-5:   1.25rem;
+    --sp-6:   1.5rem;
+    --sp-8:   2rem;
+    --sp-10:  2.5rem;
+    --sp-12:  3rem;
+    --sp-16:  4rem;
+    --sp-20:  5rem;
+    --sp-24:  6rem;
+    --sp-28:  7rem;
+  
+  
+    /* ── 레이아웃 ── */
+    --container-max:   1200px;
+    --header-height:   72px;
+  
+  
+    /* ── 그 외 ── */
+    --radius-sm:    4px;
+    --radius-md:    8px;
+    --radius-lg:    16px;
+    --radius-xl:    24px;
+    --radius-full:  9999px;
+  
+    --shadow-sm:    0 2px 8px rgba(0,0,0,.06);
+    --shadow-md:    0 4px 20px rgba(0,0,0,.10);
+    --shadow-lg:    0 8px 40px rgba(0,0,0,.15);
+    --shadow-card:  0 4px 24px rgba(0,0,0,.08);
+  
+    --ease:         cubic-bezier(.25,.46,.45,.94);
+    --ease-out:     cubic-bezier(0,0,.2,1);
+    --tr-fast:      150ms var(--ease);
+    --tr-base:      300ms var(--ease);
+    --tr-slow:      500ms var(--ease-out);
+  
+    --z-base:       1;
+    --z-dropdown:   100;
+    --z-header:     200;
+    --z-overlay:    300;
+  }

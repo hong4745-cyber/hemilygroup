@@ -1,0 +1,219 @@
+/* ==============================================
+   sub3.css — 헤밀리 브랜드 상품 페이지 v2
+   참고사진 기준: 배너 + 인트로 + 4열 연속 그리드
+   ============================================== */
+
+/* ────────────────────────────────────────────
+   페이지 배너
+   ──────────────────────────────────────────── */
+.page-banner {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: #1a3a6e;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--sp-8);
+}
+.page-banner__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  opacity: .7;
+}
+/* 좌측은 어둡게, 우측은 이미지 살리기 */
+.page-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 40, 100, .75) 0%,
+    rgba(15, 40, 100, .40) 45%,
+    rgba(15, 40, 100, .05) 100%
+  );
+}
+.page-banner__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-8);
+}
+.page-banner__title {
+  font-size: 2.6rem;
+  font-weight: var(--fw-black);
+  color: var(--color-white);
+  letter-spacing: var(--ls-tight);
+  line-height: 1.1;
+  text-shadow: 0 2px 16px rgba(0,0,0,.3);
+}
+
+/* ────────────────────────────────────────────
+   브랜드 인트로
+   ──────────────────────────────────────────── */
+.brand-intro {
+  padding: var(--sp-10) 0 var(--sp-6);
+  background: var(--color-white);
+}
+.brand-intro__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-8);
+}
+.brand-intro__sub {
+  font-family: var(--font-en);
+  font-size: var(--fs-xl);
+  color: var(--color-text-muted);
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+
+/* ────────────────────────────────────────────
+   상품 그리드 래퍼
+   ──────────────────────────────────────────── */
+.product-wrap {
+  background: var(--color-white);
+  padding: var(--sp-4) 0 var(--sp-16);
+}
+.product-wrap__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-8);
+}
+
+/* ────────────────────────────────────────────
+   상품 그리드 — 4열, 연속 배치
+   ──────────────────────────────────────────── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-5);
+}
+
+/* ────────────────────────────────────────────
+   상품 카드
+   참고: 테두리 얇은 선, 내부 이미지 + 하단 이름
+   ──────────────────────────────────────────── */
+.product-card {
+  background: var(--color-white);
+  border: 1px solid #e8e8e8;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.28s var(--ease-out),
+              box-shadow 0.28s var(--ease-out),
+              border-color 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.10);
+  border-color: #c8d8f0;
+}
+
+/* 이미지 영역: 정사각형, 흰 배경 */
+.product-card__img {
+  aspect-ratio: 1 / 1;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-6);
+  overflow: hidden;
+}
+.product-card__img img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.45s var(--ease-out);
+}
+.product-card:hover .product-card__img img {
+  transform: scale(1.07);
+}
+
+/* 하단 텍스트 영역 */
+.product-card__body {
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+  border-top: 1px solid #f0f0f0;
+}
+.product-card__name {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  /* 긴 이름 말줄임 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ────────────────────────────────────────────
+   우하단 검색 버튼
+   ──────────────────────────────────────────── */
+.search-fab {
+  position: fixed;
+  bottom: calc(var(--sp-8) + 56px); /* TOP 버튼 위 */
+  right: var(--sp-8);
+  width: 40px;
+  height: 40px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--tr-fast), color var(--tr-fast),
+              border-color var(--tr-fast);
+  color: var(--color-text-muted);
+  font-size: var(--fs-base);
+  z-index: var(--z-dropdown);
+  text-decoration: none;
+}
+.search-fab:hover {
+  background: var(--color-accent-blue);
+  color: var(--color-white);
+  border-color: var(--color-accent-blue);
+}
+
+/* ────────────────────────────────────────────
+   스크롤 인 애니메이션 (js-ready 패턴)
+   ──────────────────────────────────────────── */
+.s3-up { opacity: 1; transform: none; }
+.js-ready .s3-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s var(--ease-out),
+              transform 0.55s var(--ease-out);
+}
+.js-ready .s3-up.is-on { opacity: 1; transform: none; }
+
+.d1 { transition-delay:  60ms; }
+.d2 { transition-delay: 120ms; }
+.d3 { transition-delay: 180ms; }
+
+/* ────────────────────────────────────────────
+   반응형
+   ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .page-banner { height: 200px; }
+  .page-banner__title { font-size: var(--fs-3xl); }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
+  .brand-intro__inner,
+  .product-wrap__inner { padding-inline: var(--sp-4); }
+  .search-fab { right: var(--sp-4); bottom: calc(var(--sp-5) + 56px); }
+}
+/* ── 태블릿 (768px ~ 1023px): inner 약 720px ~ 960px ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .brand-intro__inner,
+  .product-wrap__inner { padding-inline: 24px; }
+}

@@ -1,0 +1,787 @@
+/* ==============================================
+   main.css  v3 — 인터랙션 강화
+   ============================================== */
+
+/* ──────────────────────────────────────────────
+   1. HERO: Full-Cover 슬라이더
+   ────────────────────────────────────────────── */
+
+   .hero {
+    margin-top: var(--header-height);
+    position: relative;
+    overflow: hidden;
+    background: #0a1e3c;
+    /* 섹션 사이 공백 없음 */
+    display: block;
+}
+  
+/* 트랙: 빠르고 부드럽게 */
+.hero__track {
+    display: flex;
+    transition: transform 0.62s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+  
+.hero__slide {
+    flex: 0 0 100%;
+    width: 100%;
+    min-height: 760px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+  
+/* 배경 이미지 — Ken Burns */
+.hero__slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.06);
+    transition: transform 7s ease-out;
+}
+.hero__slide.is-active .hero__slide-bg {
+    transform: scale(1);
+}
+  
+/* 오버레이 완전 제거 — 이미지 선명하게 */
+.hero__overlay {
+    display: none;
+}
+  
+/* 텍스트 컨테이너 */
+.hero__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding: var(--sp-10) var(--sp-5);
+}
+.hero__content-inner {
+    max-width: 540px;
+}
+  
+.hero__slide-num {
+    font-family: var(--font-en);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    color: rgba(255,255,255,.7);
+    margin-bottom: var(--sp-3);
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 12px rgba(0,0,0,.55);
+}
+  
+/* 모든 뱃지: 같은 파란색 */
+.hero__badge {
+    display: inline-block;
+    padding: 5px 16px;
+    background: var(--color-accent-blue);
+    color: var(--color-white);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    border-radius: var(--radius-sm);
+    letter-spacing: var(--ls-wide);
+    margin-bottom: var(--sp-5);
+}
+  
+/* 헤드 폰트 크기 줄이기: 3.25rem → 2.25rem */
+.hero__title {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-bold);
+    color: var(--color-white);
+    line-height: 1.42;
+    letter-spacing: var(--ls-tight);
+    margin-bottom: var(--sp-5);
+    word-break: keep-all;
+}
+.hero__title em {
+    font-style: normal;
+    color: #38bdf8;
+}
+
+.hero__desc {
+    font-size: var(--fs-base);
+    color: rgba(255,255,255,.92);
+    line-height: var(--lh-loose);
+    margin-bottom: var(--sp-8);
+}
+
+/* 슬라이드 1·2: 밝은 배경용 색상 오버라이드 */
+.hero__slide--light .hero__slide-num {
+    color: #111111;
+    text-shadow: none;
+}
+.hero__slide--light .hero__title {
+    color: #111111;
+}
+.hero__slide--light .hero__title em {
+    color: #38bdf8;
+}
+.hero__slide--light .hero__desc {
+    color: #111111;
+}
+
+/* 화살표 버튼 — 삭제됨 (인디케이터 카드로 대체) */
+.hero__arrow { display: none; }
+  
+/* 슬라이드 인디케이터 */
+/* 인디케이터 카드형: ← 01 / 05 → */
+/* ── 슬라이드 인디케이터 카드 ── */
+.hero__indicator {
+    position: absolute;
+    bottom: 0;
+    right: var(--sp-8);
+    z-index: 10;
+    background: rgba(255,255,255,.96);
+    border: 1px solid rgba(0,0,0,.08);
+    box-shadow: 0 2px 14px rgba(0,0,0,.10);
+    border-radius: 4px;
+    padding: 10px 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    min-width: 116px;
+}
+
+/* 상단 행: ‹ 01 / 05 › */
+.hero__ind-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* 이전 버튼 */
+.hero__ind-prev {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+    transition: color var(--tr-fast);
+    flex-shrink: 0;
+}
+.hero__ind-prev:hover { color: var(--color-accent-blue); }
+
+/* 다음 버튼 */
+.hero__ind-next {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    transition: color var(--tr-fast);
+    flex-shrink: 0;
+}
+.hero__ind-next:hover { color: var(--color-accent-blue); }
+
+/* 숫자 */
+.hero__ind-count {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    font-family: var(--font-en);
+    letter-spacing: 0.04em;
+}
+.hero__indicator-num {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+}
+.hero__ind-sep {
+    font-size: 13px;
+    color: #aaa;
+    font-weight: 400;
+}
+.hero__ind-total {
+    font-size: 13px;
+    color: #aaa;
+    font-weight: 400;
+}
+
+/* 하단 라인 (카드 하단 장식) */
+.hero__ind-line {
+    width: 100%;
+    height: 1.5px;
+    background: #e0e0e0;
+    border-radius: 2px;
+}
+  
+  
+/* ──────────────────────────────────────────────
+     2. BUSINESS: 4열 가로 배치 + 스크롤 애니메이션
+     ────────────────────────────────────────────── */
+  
+.business { background: var(--color-white); padding-block: var(--sp-20); }
+
+/* 섹션 타이틀 오버라이드 */
+.business .section-head__title { font-size: var(--fs-3xl); }
+.business .section-head__desc  { font-size: var(--fs-md); }
+
+/* 4열 flex — 탑 보더 없음 */
+.business__icon-grid {
+    display: flex;
+    margin-top: var(--sp-12);
+
+}
+
+/* 아이콘 아이템 — 아코디언 + reveal-top 공존 */
+.business__icon-item {
+    flex: 1;
+    min-width: 0;
+    padding: var(--sp-12) var(--sp-8) var(--sp-10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-4);
+    text-decoration: none;
+    overflow: hidden;
+    /* 아코디언 트랜지션 */
+    transition: flex 0.52s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background 0.35s,
+                opacity 0.65s var(--ease-out),
+                transform 0.65s var(--ease-out);
+}
+.business__icon-item:hover {
+    flex: 1.72;
+    background: #f4f7ff;
+}
+/* reveal-top.is-visible 이후 hover시 transform 초기화 방지 */
+.business__icon-item.is-visible:hover {
+    transform: scale(1); /* scale 충돌 방지 */
+}
+  
+.business__icon-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    transition: border-color var(--tr-base), color var(--tr-base),
+                background var(--tr-base), transform 0.35s var(--ease-out);
+}
+.business__icon-item:hover .business__icon-circle {
+    border-color: var(--color-accent-blue);
+    color: var(--color-accent-blue);
+    background: rgba(0, 70, 213, .08);
+    /* scale 제거: hover 배경이 원을 완전히 덮지 못하는 문제 방지 */
+}
+  
+.business__icon-label {
+    font-family: var(--font-en);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-widest);
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+    text-align: center;
+    line-height: 1.5;
+    transition: color var(--tr-fast);
+    white-space: nowrap;
+}
+.business__icon-item:hover .business__icon-label {
+    color: var(--color-accent-blue);
+}
+  
+/* 자세히보기 — 호버 시 등장 */
+.business__more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    color: var(--color-accent-blue);
+    letter-spacing: var(--ls-wide);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s 0.08s, transform 0.3s 0.08s;
+    white-space: nowrap;
+}
+.business__more-link::after { content: '→'; }
+.business__icon-item:hover .business__more-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+  
+/* ──────────────────────────────────────────────
+     3. BRAND CARDS: 미러 레이아웃 + 스케일 인
+     ────────────────────────────────────────────── */
+  
+/* ══════════════════════════════════════════════════
+   BRANDS — 완전 재설계
+   PC    : 두 카드 가로 나란히, 세로 구분선
+   태블릿: 세로 스택, 가로 구분선, 이미지 확대
+   모바일: 세로 스택, 가로 구분선, 이미지 중간
+   ══════════════════════════════════════════════════ */
+
+.brands { background: var(--color-white); }
+
+/* ── 전체 래퍼 ── */
+.brands-wrap {
+    display: flex;
+    flex-direction: row;       /* PC: 두 카드 나란히 */
+    align-items: stretch;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-block: var(--sp-14);
+    padding-inline: var(--sp-8);
+}
+
+/* ── 세로 구분선 (PC) ── */
+.brands-divider {
+    width: 1px;
+    background: var(--color-border);
+    flex-shrink: 0;
+    align-self: stretch;
+    margin-inline: var(--sp-4);
+}
+
+/* ── 카드 행 (각 브랜드) ── */
+.brand-row {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--sp-6);
+    overflow: hidden;
+}
+
+/* ── 텍스트 블록 ── */
+.brand-row__text {
+    display: flex;
+    flex-direction: column;
+    padding: var(--sp-4);
+    opacity: 0;
+    /* push 느낌: 빠른 가속 후 부드럽게 멈춤 */
+    transition: opacity  0.68s cubic-bezier(0.22, 1, 0.36, 1) 0.15s,
+                transform 0.68s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+/* 왼쪽 텍스트: 왼쪽에서 밀려오기 */
+.brand-row__text--left  { transform: translateX(-70px); }
+/* 오른쪽 텍스트: 오른쪽에서 밀려오기 */
+.brand-row__text--right {
+    transform: translateX(70px);
+    align-items: flex-end;
+    text-align: right;
+}
+.brand-row__text.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.brand-row__en {
+    font-family: var(--font-en);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    color: var(--color-text-muted);
+    letter-spacing: var(--ls-wider);
+    margin-bottom: var(--sp-1);
+}
+.brand-row__ko {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-black);
+    color: var(--color-accent-blue);
+    line-height: 1.15;
+    letter-spacing: var(--ls-tight);
+    margin-bottom: var(--sp-5);
+}
+.brand-row__desc {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    line-height: var(--lh-loose);
+    margin-bottom: var(--sp-8);
+}
+
+/* ── 이미지 블록 ── */
+.brand-row__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.78);
+    /* 스프링: 약간 오버슈트 후 정착 (속도감) */
+    transition: opacity  0.75s cubic-bezier(0.34, 1.56, 0.64, 1),
+                transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.brand-row__image.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+.brand-row__image img {
+    max-width: 280px;
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.5s var(--ease-out);
+}
+.brand-row__image:hover img { transform: scale(1.05); }
+
+
+/* ══════════════════════════════════════════════════
+   BRANDS 반응형
+   ══════════════════════════════════════════════════ */
+
+/* ── 태블릿 (768px ~ 1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .brands-wrap {
+        flex-direction: column;   /* 세로 스택 */
+        padding-block: var(--sp-10);
+        padding-inline: var(--sp-6);
+        gap: 0;
+    }
+
+    /* 구분선: 가로선으로 전환 */
+    .brands-divider {
+        width: auto;
+        height: 1px;
+        margin-inline: 0;
+        margin-block: var(--sp-8);
+        align-self: auto;
+    }
+
+    .brand-row {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-8);
+    }
+
+    /* 이미지: 태블릿에서 가장 크게 */
+    .brand-row__image img {
+        max-width: 300px;
+        max-height: 260px;
+    }
+
+    .brand-row__ko   { font-size: var(--fs-2xl); }
+    .brand-row__desc { font-size: var(--fs-base); margin-bottom: var(--sp-6); }
+}
+
+
+/* ── 모바일 (≤767px) ── */
+@media (max-width: 767px) {
+
+    .brands-wrap {
+        flex-direction: column;   /* 세로 스택 */
+        padding-block: var(--sp-8);
+        padding-inline: var(--sp-4);
+        gap: 0;
+    }
+
+    /* 구분선: 가로선으로 전환 */
+    .brands-divider {
+        width: auto;
+        height: 1px;
+        margin-inline: 0;
+        margin-block: var(--sp-6);
+        align-self: auto;
+    }
+
+    .brand-row {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-3);
+        align-items: center;
+    }
+
+    /* 텍스트 방향별 외측 여백 */
+    .brand-row__text--left  {
+        padding-left: 12px;
+    }
+    .brand-row__text--right {
+        padding-right: 12px;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .brand-row__en   { font-size: 10px; margin-bottom: var(--sp-1); }
+    .brand-row__ko   { font-size: var(--fs-xl); margin-bottom: var(--sp-2); }
+    .brand-row__desc {
+        font-size: var(--fs-xs);
+        line-height: 1.6;
+        margin-bottom: var(--sp-4);
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* 이미지 중간 크기 */
+    .brand-row__image img {
+        max-width: 160px;
+        max-height: 140px;
+    }
+}
+
+
+/* ── 소형 모바일 (≤375px) ── */
+@media (max-width: 375px) {
+
+    .brands-wrap {
+        padding-inline: var(--sp-3);
+    }
+
+    .brand-row__ko   { font-size: var(--fs-lg); }
+    .brand-row__desc { font-size: 11px; -webkit-line-clamp: 2; }
+
+    .brand-row__image img {
+        max-width: 120px;
+        max-height: 105px;
+    }
+}
+
+
+/* ────────────────────────────────────────────────
+     NEWS
+     ────────────────────────────────────────────── */
+.news-section {
+    background: #1a2a5e;
+    padding-block: 9rem;
+}
+.news-section .container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 150px;
+    align-items: start;
+}
+
+/* VIEW MORE PC/모바일 기본 상태 */
+.news-viewmore--mobile { display: none; }
+.news-viewmore--pc     { display: inline-flex; margin-top: var(--sp-16); align-self: flex-start; }
+.news-left { padding-top: 0; display: flex; flex-direction: column; justify-content: flex-start; }
+.news-left__label {
+    font-family: var(--font-en);
+    font-size: var(--fs-xs);
+    color: rgba(255,255,255,.5);
+    letter-spacing: var(--ls-wider);
+    font-style: italic;
+    margin-bottom: var(--sp-2);
+    display: block;
+}
+.news-left__sub {
+    font-family: var(--font-en);
+    font-size: var(--fs-2xl);
+    color: rgba(255,255,255,.6);
+    letter-spacing: 0;
+    line-height: 1.25;
+    margin-bottom: var(--sp-4);
+    font-style: normal;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+}
+.news-left__sub::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    background: #38bdf8;
+    left: -12px;
+    top: -5px;
+    z-index: -1;
+}
+.news-left__title {
+    font-size: 3rem;
+    font-weight: var(--fw-black);
+    color: var(--color-white);
+    letter-spacing: var(--ls-tight);
+    line-height: 1;
+    margin-bottom: var(--sp-6);
+}
+.news-list { display: flex; flex-direction: column; gap: var(--sp-4); padding-left: 0; }
+.news-item {
+    padding: var(--sp-10) 0;
+    margin-left: 0;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    cursor: pointer;
+    transition: opacity var(--tr-fast);
+}
+
+.news-item:first-child {
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.news-item:hover { opacity: .75; }
+.news-item__title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-medium);
+    color: var(--color-white);
+    line-height: var(--lh-normal);
+    padding: var(--sp-4) 0;
+    border: none;
+}
+.news-item__date {
+    font-size: var(--fs-sm);
+    color: rgba(255,255,255,.4);
+    font-family: var(--font-en);
+}
+  
+/* ────────────────────────────────────────────────
+     ABOUT
+     ────────────────────────────────────────────── */
+.about-section { padding-block: var(--sp-12); background: var(--color-white); }
+.about-section .container {}
+.about-section__eyebrow {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-3);
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--sp-6);
+    line-height: 1.6;
+}
+.about-section__eyebrow::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--color-accent-blue);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+.about-section__desc {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    line-height: var(--lh-loose);
+    max-width: 480px;
+    margin-bottom: var(--sp-4);
+}
+.about-section__title {
+    font-family: var(--font-en);
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-black);
+    color: var(--color-text-dark);
+    letter-spacing: var(--ls-tight);
+    margin-bottom: var(--sp-8);
+}
+.about-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: var(--sp-4);
+margin-top: var(--sp-6);
+}
+.about-card {
+position: relative;
+overflow: hidden;
+aspect-ratio: 3/4;
+border-radius: var(--radius-sm);
+cursor: pointer;
+text-decoration: none;
+display: block;
+}
+/* background-image 방식 */
+.about-card__bg {
+position: absolute;
+inset: 0;
+background-size: cover;
+background-position: center;
+transition: transform var(--tr-slow);
+filter: grayscale(20%);
+}
+.about-card:hover .about-card__bg {
+transform: scale(1.06);
+filter: grayscale(0%);
+}
+.about-card__overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.75) 100%);
+transition: background var(--tr-base);
+}
+.about-card:hover .about-card__overlay {
+background: linear-gradient(180deg, rgba(0,70,213,.15) 0%, rgba(0,70,213,.72) 100%);
+}
+/* 영문 라벨 (세로) */
+.about-card__en-label {
+position: absolute;
+top: var(--sp-4);
+left: var(--sp-4);
+font-family: var(--font-en);
+font-size: 10px;
+color: rgba(255,255,255,.55);
+letter-spacing: var(--ls-wider);
+writing-mode: vertical-rl;
+text-orientation: mixed;
+}
+/* 하단 텍스트 */
+.about-card__content {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+padding: var(--sp-5);
+}
+.about-card__ko-title {
+font-size: var(--fs-base);
+font-weight: var(--fw-bold);
+color: var(--color-white);
+line-height: 1.3;
+letter-spacing: var(--ls-tight);
+}
+
+/* ── 반응형 ── */
+@media (max-width: 1024px) {
+.about-grid { grid-template-columns: repeat(2, 1fr); }
+.mega-menu__cols { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+
+/* 뉴스 모바일: 타이틀 위 / 리스트 아래 / VIEW MORE 맨 아래 */
+.news-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+/* 1: 타이틀 블록 */
+.news-section .news-left {
+    order: 1;
+    padding-bottom: var(--sp-6);
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    margin-bottom: var(--sp-4);
+}
+/* 2: 뉴스 리스트 */
+.news-section .news-list {
+    order: 2;
+}
+/* 3: VIEW MORE 모바일용 — 뉴스 아래 중앙 */
+.news-viewmore--mobile {
+    display: flex;
+    order: 3;
+    justify-content: center;
+    margin-top: var(--sp-8);
+    padding-top: var(--sp-4);
+    border-top: 1px solid rgba(255,255,255,.12);
+}
+/* PC VIEW MORE 모바일에서 숨김 */
+.news-viewmore--pc { display: none; }
+/* 타이틀 좌측 패딩 제거 */
+.news-left { padding-top: 0; }
+.news-left__title { font-size: var(--fs-3xl); }
+.about-grid { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
+.about-section__title { font-size: var(--fs-2xl); }
+}
+/* 자세히보기 — 터치 기기(hover 없음): 항상 표시 */
+@media (hover: none) {
+    .business__more-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

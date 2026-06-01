@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="헤밀리 뉴스룸 — 매거진 & 보도자료" />
+  <title>헤밀리 뉴스룸 | 해밀리그룹</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/sub5.css" />
+</head>
+<body>
+
+<!-- ════════════ HEADER ════════════ -->
+<header class="site-header is-scrolled" role="banner">
+  <div class="container">
+    <a href="index.html" class="header-logo" aria-label="해밀리그룹 홈으로">
+      <img src="images/01_header_logo.png" alt="Hemily" class="header-logo__img" />
+    </a>
+    <nav class="gnb" role="navigation" aria-label="주요 메뉴">
+      <ul role="list" style="display:flex;align-items:center;margin:0;padding:0;list-style:none;">
+        <li class="gnb__item">
+          <a href="sub1.html" class="gnb__link gnb__link--has-dropdown">헤밀리 그룹</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub1.html"          class="gnb__dropdown-link">헤밀리 그룹</a></li>
+            <li><a href="sub1_story.html" class="gnb__dropdown-link">황성주 박사</a></li>
+            <li><a href="contact.html"        class="gnb__dropdown-link">Contact US</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a href="sub2.html" class="gnb__link gnb__link--has-dropdown">사업분야</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub2.html" class="gnb__dropdown-link">사업분야</a></li>
+            <li><a href="sub2.html#business"  class="gnb__dropdown-link">사업</a></li>
+            <li><a href="sub2.html#education" class="gnb__dropdown-link">미션&amp;교육</a></li>
+            <li><a href="sub2.html#medical"   class="gnb__dropdown-link">메디컬 기반</a></li>
+            <li><a href="sub2.html#residence" class="gnb__dropdown-link">공간&amp;레지던스</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a href="sub3.html" class="gnb__link gnb__link--has-dropdown" aria-expanded="false" aria-haspopup="true">헤밀리</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub3.html" class="gnb__dropdown-link">생식&amp;영양식</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a href="sub4.html" class="gnb__link gnb__link--has-dropdown" aria-expanded="false" aria-haspopup="true">헤밀리 헬스</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub4.html" class="gnb__dropdown-link">생식</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item is-active">
+          <a href="sub5.html" class="gnb__link gnb__link--has-dropdown">헤밀리 뉴스룸</a>
+          <ul class="gnb__dropdown" role="list">
+            <li><a href="sub5.html" class="gnb__dropdown-link">전체</a></li>
+            <li><a href="sub5.html#magazine" class="gnb__dropdown-link">매거진</a></li>
+            <li><a href="sub5.html#press"    class="gnb__dropdown-link">보도자료</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item"><a href="sub6.html" class="gnb__link">해밀리人</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="megaMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="모바일 메뉴">
+  <ul class="mob-list">
+
+    <!-- 헤밀리 그룹 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub1.html" class="mob-link">헤밀리 그룹</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub1.html"       class="mob-sub__link">헤밀리 그룹</a></li>
+        <li><a href="sub1_story.html" class="mob-sub__link">황성주 박사</a></li>
+        <li><a href="contact.html"    class="mob-sub__link">Contact US</a></li>
+      </ul>
+    </li>
+
+    <!-- 사업분야 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub2.html" class="mob-link">사업분야</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub2.html" class="mob-sub__link">사업분야</a></li>
+        <li><a href="sub2.html#business"  class="mob-sub__link">사업</a></li>
+        <li><a href="sub2.html#education" class="mob-sub__link">미션&amp;교육</a></li>
+        <li><a href="sub2.html#medical"   class="mob-sub__link">메디컬 기반</a></li>
+        <li><a href="sub2.html#residence" class="mob-sub__link">공간&amp;레지던스</a></li>
+      </ul>
+    </li>
+
+    <!-- 헤밀리 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub3.html" class="mob-link">헤밀리</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub3.html" class="mob-sub__link">생식&amp;영양식</a></li>
+      </ul>
+    </li>
+
+    <!-- 헤밀리 헬스 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub4.html" class="mob-link">헤밀리 헬스</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub4.html" class="mob-sub__link">생식</a></li>
+      </ul>
+    </li>
+
+    <!-- 헤밀리 뉴스룸 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub5.html" class="mob-link">헤밀리 뉴스룸</a>
+        <button class="mob-toggle" aria-expanded="false" aria-label="하위 메뉴 열기">
+          <span class="mob-arrow">›</span>
+        </button>
+      </div>
+      <ul class="mob-sub">
+        <li><a href="sub5.html"          class="mob-sub__link">전체</a></li>
+        <li><a href="sub5.html#magazine" class="mob-sub__link">매거진</a></li>
+        <li><a href="sub5.html#press"    class="mob-sub__link">보도자료</a></li>
+      </ul>
+    </li>
+
+    <!-- 해밀리人 -->
+    <li class="mob-item">
+      <div class="mob-row">
+        <a href="sub6.html" class="mob-link">해밀리人</a>
+      </div>
+    </li>
+
+  </ul>
+</nav>
+
+
+<!-- ════════════ MEGA MENU ════════════ -->
+<div class="mega-menu" id="megaMenu" role="dialog" aria-label="전체 메뉴" aria-hidden="true">
+  <div class="mega-menu__header">
+    <a href="index.html" class="mega-menu__logo-link">
+      <img src="images/01_header_logo1.png" alt="Hemily" class="mega-menu__logo-img" />
+    </a>
+  </div>
+
+  <div class="mega-menu__body">
+    <div class="mega-menu__cols">
+
+      <!-- 헤밀리 그룹 -->
+      <div class="mega-col">
+        <a href="sub1.html" class="mega-col__title">헤밀리 그룹</a>
+        <div class="mega-col__links">
+          <a href="sub1.html#vision"   class="mega-col__link">그룹 비전</a>
+          <a href="sub1.html#business" class="mega-col__link">사업영역</a>
+          <a href="sub1.html#story"    class="mega-col__link">그룹 스토리</a>
+          <a href="sub1.html#history"  class="mega-col__link">연혁</a>
+        </div>
+      </div>
+
+      <!-- 사업분야 -->
+      <div class="mega-col">
+        <a href="sub2.html" class="mega-col__title">사업분야</a>
+        <div class="mega-col__links">
+          <a href="sub2.html" class="mega-col__link">사업분야</a>
+          <a href="sub2.html#business"  class="mega-col__link">사업</a>
+          <a href="sub2.html#education" class="mega-col__link">미션&amp;교육</a>
+          <a href="sub2.html#medical"   class="mega-col__link">메디컬 기반</a>
+          <a href="sub2.html#residence" class="mega-col__link">공간&amp;레지던스</a>
+        </div>
+      </div>
+
+      <!-- 헤밀리 -->
+      <div class="mega-col">
+        <a href="sub3.html" class="mega-col__title">헤밀리</a>
+        <div class="mega-col__links">
+          <a href="sub3.html" class="mega-col__link">생식&amp;영양식</a>
+        </div>
+      </div>
+
+      <!-- 헤밀리 헬스 -->
+      <div class="mega-col">
+        <a href="sub4.html" class="mega-col__title">헤밀리 헬스</a>
+        <div class="mega-col__links">
+          <a href="sub4.html" class="mega-col__link">생식</a>
+        </div>
+      </div>
+
+      <!-- 헤밀리 뉴스룸 -->
+      <div class="mega-col">
+        <a href="sub5.html" class="mega-col__title">헤밀리 뉴스룸</a>
+        <div class="mega-col__links">
+          <a href="sub5.html"          class="mega-col__link">전체</a>
+          <a href="sub5.html#magazine" class="mega-col__link">매거진</a>
+          <a href="sub5.html#press"    class="mega-col__link">보도자료</a>
+        </div>
+      </div>
+
+      <!-- 해밀리人 -->
+      <div class="mega-col">
+        <a href="sub6.html" class="mega-col__title">해밀리人</a>
+        <div class="mega-col__links">
+          <a href="sub6.html" class="mega-col__link">해밀리人</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 하단 footer -->
+  <div class="mega-menu__footer">
+    <div class="mega-menu__footer-top">
+      <a href="#" class="mega-menu__footer-link">개인정보처리방침</a>
+      <a href="#" class="mega-menu__footer-link">이용약관</a>
+    </div>
+    <div class="mega-menu__footer-bottom">
+      <span>ADDRESS: 서울특별시 강남구 역삼로 552 (대치동, KM빌딩) 4층, 5층</span>
+      <span>TEL: 031-701-3377</span>
+      <span>EMAIL: webmaster@hemily.co.kr</span>
+    </div>
+  </div>
+
+</div>
+<!-- ════════════ /MEGA MENU ════════════ -->
+
+<div style="margin-top:var(--header-height);">
+
+  <!-- ════════════════ 배너 ════════════════ -->
+  <div class="page-banner">
+    <div class="page-banner__bg"
+         style="background-image:url('images/sub5_main.png');
+                background-position:center;"></div>
+    <div class="page-banner__overlay"></div>
+    <div class="page-banner__content">
+      <h1 class="page-banner__title">매거진&amp;보도자료</h1>
+    </div>
+  </div>
+
+
+  <!-- ════ 서브 고정 탭바 ════ -->
+  <nav class="sub-page-nav" id="subPageNav" aria-label="헤밀리 뉴스룸 메뉴">
+    <div class="sub-page-nav__inner">
+      <a href="#main-content" class="sub-page-tab is-active" data-section="main-content">전체</a>
+      <a href="#magazine" class="sub-page-tab" data-section="magazine">매거진</a>
+      <a href="#press" class="sub-page-tab" data-section="press">보도자료</a>
+      <span class="sub-page-nav__slider" id="subNavSlider"></span>
+    </div>
+  </nav>
+    <!-- ════════════════ 필터 탭 ════════════════ -->
+  <div class="news-filter">
+    <div class="news-filter__inner">
+      <div class="news-filter__tabs">
+        <button class="filter-tab is-active" data-filter="all">전체</button>
+        <button class="filter-tab" data-filter="magazine">매거진</button>
+        <button class="filter-tab" data-filter="press">보도자료</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════ 뉴스 그리드 ════════════════ -->
+  <main class="news-section" id="main-content">
+    <div class="news-section__inner">
+      <div class="news-grid" id="newsGrid">
+
+        <!-- 1: 보도자료 -->
+        <a href="#" class="news-card" data-category="press">
+          <div class="news-card__thumb news-card__thumb--empty">
+            <img src="images/sub5_01.jpg" alt="헤밀리병원 준공" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">의왕시 '종합병원' 첫삽 떴다…'헤밀리병원' 2029년 준공</p>
+            <time class="news-card__date">04-21</time>
+          </div>
+        </a>
+
+        <!-- 2: 보도자료 -->
+        <a href="#" class="news-card" data-category="press">
+          <div class="news-card__thumb">
+            <img src="images/sub5_02.png" alt="라이프밀 팝업스토어" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">[데일리시큐] 헤밀리그룹 라이프밀, 연남동서 첫 브랜드 팝업스토어 개설</p>
+            <time class="news-card__date">03-05</time>
+          </div>
+        </a>
+
+        <!-- 3: 보도자료 -->
+        <a href="#" class="news-card" data-category="press">
+          <div class="news-card__thumb">
+            <img src="images/sub5_02.png" alt="라이프밀 홍대 팝업" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">[내의경제TV] 라이프밀, 홍대 단독 팝업스토어 오픈</p>
+            <time class="news-card__date">03-05</time>
+          </div>
+        </a>
+
+        <!-- 4: 보도자료 -->
+        <a href="#" class="news-card" data-category="press">
+          <div class="news-card__thumb">
+            <img src="images/sub5_02.png" alt="웰니스 시장" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">[헬스&amp;경제] 헤밀리그룹, '라이프밀' 앞세워 웰니스 시장…</p>
+            <time class="news-card__date">03-05</time>
+          </div>
+        </a>
+
+        <!-- 5: 매거진 -->
+        <a href="#" class="news-card" data-category="magazine">
+          <div class="news-card__thumb">
+            <img src="images/sub5_05.jpg" alt="치매 예방" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">'독서'와 '운동'중에 무엇이 더 치매 예방에 이로울까?</p>
+            <time class="news-card__date">12-31</time>
+          </div>
+        </a>
+
+        <!-- 6: 매거진 -->
+        <a href="#" class="news-card" data-category="magazine">
+          <div class="news-card__thumb">
+            <img src="images/sub5_06.jpg" alt="뇌 에너지" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">뇌는 어떻게 에너지를 얻는가?</p>
+            <time class="news-card__date">12-31</time>
+          </div>
+        </a>
+
+        <!-- 7: 매거진 -->
+        <a href="#" class="news-card" data-category="magazine">
+          <div class="news-card__thumb">
+            <img src="images/sub5_07.jpg" alt="뇌 환경" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">뇌를 젊어지게 하려면 환경을 바꿔라</p>
+            <time class="news-card__date">12-09</time>
+          </div>
+        </a>
+
+        <!-- 8: 매거진 -->
+        <a href="#" class="news-card" data-category="magazine">
+          <div class="news-card__thumb">
+            <img src="images/sub5_08.jpg" alt="뇌 젊음" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">뇌도 젊어질 수 있을까?</p>
+            <time class="news-card__date">12-09</time>
+          </div>
+        </a>
+
+        <!-- 9: 매거진 -->
+        <a href="#" class="news-card" data-category="magazine">
+          <div class="news-card__thumb">
+            <img src="images/sub5_09.jpg" alt="심폐 체력" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">심폐 체력은 최고의 항노화 약이다</p>
+            <time class="news-card__date">11-19</time>
+          </div>
+        </a>
+
+        <!-- 10: 매거진 -->
+        <a href="#" class="news-card" data-category="magazine">
+          <div class="news-card__thumb">
+            <img src="images/sub5_10.jpg" alt="유산소 운동" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">왜 유산소 운동은 숨이 차게 해야 하는가?</p>
+            <time class="news-card__date">11-19</time>
+          </div>
+        </a>
+
+        <!-- 11: 보도자료 -->
+        <a href="#" class="news-card" data-category="press">
+          <div class="news-card__thumb">
+            <img src="images/sub5_11.png" alt="AI 의료혁신" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">[조선일보]AI 시대의 의료혁신·미래융합의학… 의왕 백운밸리에…</p>
+            <time class="news-card__date">10-28</time>
+          </div>
+        </a>
+
+        <!-- 12: 보도자료 -->
+        <a href="#" class="news-card" data-category="press">
+          <div class="news-card__thumb">
+            <img src="images/sub5_12.jpg" alt="라이프밀 홈쇼핑" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__title">[동아일보]이롬, '황성주 박사의 1일 1생식 라이프밀' 홈쇼핑 매진</p>
+            <time class="news-card__date">10-24</time>
+          </div>
+        </a>
+
+      </div><!-- /.news-grid -->
+
+      <!-- 페이지네이션 -->
+      <nav class="pagination" aria-label="페이지 이동">
+        <a href="#" class="page-btn is-active">1</a>
+        <a href="#" class="page-btn">2</a>
+        <a href="#" class="page-btn">3</a>
+        <a href="#" class="page-btn">4</a>
+        <a href="#" class="page-btn">5</a>
+        <a href="#" class="page-btn">6</a>
+        <a href="#" class="page-btn page-btn--arrow" aria-label="다음 페이지">»</a>
+      </nav>
+
+    </div>
+  </main>
+
+</div>
+
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-policy">
+    <div class="container">
+      <nav class="footer-policy__links">
+        <a href="#" class="footer-policy__link footer-policy__link--bold">개인정보처리방침</a>
+        <a href="#" class="footer-policy__link">이용약관</a>
+      </nav>
+      <div class="footer-family">
+        <button class="footer-family__btn" type="button">Family Site</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-info">
+    <div class="container">
+      <address class="footer-address" style="font-style:normal;">
+        <p>
+          <span>ADDRESS: 서울특별시 강남구 역삼로 552 신일빌딩, A빌딩 4층, 5층</span>
+          <span>TEL: 031-751-337T</span>
+          <span>EMAIL: webmaster@hemily.co.kr</span>
+        </p>
+        <p class="footer-copyright">COPYRIGHT ©HEMILY GROUP ALL RIGHTS RESERVED.</p>
+      </address>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" aria-label="맨 위로 이동">
+  <span class="scroll-top__arrow">▲</span>
+  <span class="scroll-top__text">TOP</span>
+</button>
+
+<script src="js/common.js"></script>
+<script src="js/sub5.js"></script>
+</body>
+</html>
