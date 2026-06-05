@@ -48,8 +48,8 @@
 - 탭 클릭 시 scrollLock으로 오감지 방지
 - 슬라이딩 인디케이터 바 (offsetLeft 기반 위치 계산)
 
-<img width="999" height="569" alt="Image" src="https://github.com/user-attachments/assets/75e5f18c-5c79-4ba5-9100-dfda94b9268d" />
 
+<img width="999" height="569" alt="Image" src="https://github.com/user-attachments/assets/75e5f18c-5c79-4ba5-9100-dfda94b9268d" />
 **타임라인 + Sticky 사진 패널 (sub1)**
 - 스크롤 구간별 사진 자동 교체 (data-photo 속성 기반)
 - CSS position: sticky 활용
