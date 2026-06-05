@@ -28,17 +28,17 @@
 ---
 
 ## 주요 기능
-<img width="603" height="463" alt="Image" src="https://github.com/user-attachments/assets/81abb27f-7741-4356-a787-63e6751873b1" />
 
 **Hero 슬라이더**
+<img width="603" height="463" alt="Image" src="https://github.com/user-attachments/assets/81abb27f-7741-4356-a787-63e6751873b1" />
 - 자동 재생(3.8초 간격), 이전/다음 화살표 버튼
 - 터치 스와이프 및 마우스 드래그 지원
 - 탭 비활성 시 자동 재생 일시정지
 - Ken Burns 효과 (is-active 클래스 기반)
 
+**메가 메뉴 / 모바일 GNB**
 <img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/d7f222b8-91b0-4185-8ac7-52c208f3c95f" />
 <img width="617" height="918" alt="Image" src="https://github.com/user-attachments/assets/be6f1da2-18b4-4efb-b37a-4360f5e664f2" />
-**메가 메뉴 / 모바일 GNB**
 - PC: 풀스크린 오버레이 메가 메뉴
 - 모바일: 아코디언 방식 드로어 메뉴
 - 스크롤 시 헤더 is-scrolled 클래스 전환
@@ -48,9 +48,8 @@
 - 탭 클릭 시 scrollLock으로 오감지 방지
 - 슬라이딩 인디케이터 바 (offsetLeft 기반 위치 계산)
 
-
-<img width="999" height="569" alt="Image" src="https://github.com/user-attachments/assets/75e5f18c-5c79-4ba5-9100-dfda94b9268d" />
 **타임라인 + Sticky 사진 패널 (sub1)**
+<img width="999" height="569" alt="Image" src="https://github.com/user-attachments/assets/75e5f18c-5c79-4ba5-9100-dfda94b9268d" />
 - 스크롤 구간별 사진 자동 교체 (data-photo 속성 기반)
 - CSS position: sticky 활용
 - 모바일 rootMargin 별도 보정
