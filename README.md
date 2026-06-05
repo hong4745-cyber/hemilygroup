@@ -28,7 +28,7 @@
 ---
 
 ## 주요 기능
-
+<img width="603" height="463" alt="Image" src="https://github.com/user-attachments/assets/81abb27f-7741-4356-a787-63e6751873b1" />
 **Hero 슬라이더**
 - 자동 재생(3.8초 간격), 이전/다음 화살표 버튼
 - 터치 스와이프 및 마우스 드래그 지원
