@@ -40,7 +40,9 @@
 
 **메가 메뉴 / 모바일 GNB**
 <img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/d7f222b8-91b0-4185-8ac7-52c208f3c95f" />
+
 <img width="617" height="918" alt="Image" src="https://github.com/user-attachments/assets/be6f1da2-18b4-4efb-b37a-4360f5e664f2" />
+
 - PC: 풀스크린 오버레이 메가 메뉴
 - 모바일: 아코디언 방식 드로어 메뉴
 - 스크롤 시 헤더 is-scrolled 클래스 전환
